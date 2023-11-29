@@ -2,6 +2,10 @@ package us.fatehi.leeting;
 
 import java.util.Stack;
 
+/**
+ * Stack
+ * https://leetcode.com/problems/valid-parentheses
+ */
 public class ValidParentheses {
 
     public static void main(String args[]) {
