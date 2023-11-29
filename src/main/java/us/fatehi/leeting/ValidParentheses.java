@@ -1,9 +1,11 @@
+package us.fatehi.leeting;
+
 import java.util.Stack;
 
-public class Solution2 {
+public class ValidParentheses {
 
         public static void main(String args[]) {
-            Solution2 main = new Solution2();
+            ValidParentheses main = new ValidParentheses();
 
             System.out.println("\"" + "([)]" + "\" --> " + main.isValid("([)]"));
             
