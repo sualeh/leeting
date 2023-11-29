@@ -17,7 +17,7 @@ public class ListNode {
         this.next = next;
     }
 
-    public static ListNode make(int... n) {
+    public static ListNode of(int... n) {
         if (n == null || n.length == 0) {
             throw new IllegalArgumentException();
         }

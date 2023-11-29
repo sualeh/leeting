@@ -13,8 +13,8 @@ public class AddTwoNumbers {
     public static void main(String[] args) {
         AddTwoNumbers add = new AddTwoNumbers();
 
-        ListNode sum1 = add.addTwoNumbers(ListNode.make(2, 4, 3), ListNode.make(5, 6, 4));
-        boolean checkEquals1 = ListNode.checkEquals(sum1, ListNode.make(7, 0, 8));
+        ListNode sum1 = add.addTwoNumbers(ListNode.of(2, 4, 3), ListNode.of(5, 6, 4));
+        boolean checkEquals1 = ListNode.checkEquals(sum1, ListNode.of(7, 0, 8));
         System.out.println(checkEquals1);
     }
 
