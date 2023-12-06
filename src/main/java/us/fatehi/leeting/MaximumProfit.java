@@ -1,6 +1,5 @@
 package us.fatehi.leeting;
 
-import us.ListNode;
 
 public class MaximumProfit {
     
