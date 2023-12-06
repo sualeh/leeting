@@ -8,8 +8,6 @@ import us.ListNode;
  */
 public class AddTwoNumbers {
 
-
-
     public static void main(String[] args) {
         AddTwoNumbers add = new AddTwoNumbers();
 
