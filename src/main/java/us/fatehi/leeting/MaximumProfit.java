@@ -6,8 +6,8 @@ public class MaximumProfit {
     public static void main(String[] args) {
         MaximumProfit maxProfit = new MaximumProfit();
 
-        int profit = maxProfit.maxProfit(new int[] {1, 2, 4, 5, 8, 10});
-        boolean checkEquals1 = profit == 9;    
+        int profit = maxProfit.maxProfit(new int[] {4, 5, 8, 10, 1, 2, 3});
+        boolean checkEquals1 = profit == 6;    
         System.out.println(checkEquals1);
     }
 
