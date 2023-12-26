@@ -1,5 +1,6 @@
 package us.fatehi.leeting;
 
+import org.junit.jupiter.api.Test;
 import us.ListNode;
 
 /**
@@ -8,7 +9,9 @@ import us.ListNode;
  */
 public class AddTwoNumbers {
 
-    public static void main(String[] args) {
+    @Test
+    public void maintest() {
+
         AddTwoNumbers add = new AddTwoNumbers();
 
         ListNode sum1 = add.addTwoNumbers(ListNode.of(2, 4, 3), ListNode.of(5, 6, 4));

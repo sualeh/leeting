@@ -1,6 +1,9 @@
 package us.fatehi.leeting;
 
+import java.io.PrintWriter;
 import java.util.Stack;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * Stack
@@ -8,14 +11,16 @@ import java.util.Stack;
  */
 public class ValidParentheses {
 
-    public static void main(String args[]) {
-        ValidParentheses main = new ValidParentheses();
+    @Test
+    public void maintest() {
 
-        System.out.println("\"" + "([)]" + "\" --> " + main.isValid("([)]"));
+        ValidParentheses validParentheses = new ValidParentheses();
 
-        System.out.println("\"" + "()[]{}" + "\" --> " + main.isValid("()[]{}"));
+        Assertions.assertEquals(false, validParentheses.isValid("([)]"), "\"" + "([)]" + "\"");
 
-        System.out.println("\"" + "([])" + "\" --> " + main.isValid("([])"));
+        Assertions.assertEquals(true, validParentheses.isValid("()[]{}"), "\"" + "()[]{}" + "\"");
+
+        Assertions.assertEquals(true, validParentheses.isValid("([])"), "\"" + "([])" + "\"");
     }
 
     public boolean isValid(String s) {

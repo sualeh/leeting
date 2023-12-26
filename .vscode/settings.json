@@ -8,4 +8,6 @@
     "java.format.settings.profile": "GoogleStyle",
     "git.followTagsWhenSync": true,
     "git.rebaseWhenSync": true,
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.debug.settings.onBuildFailureProceed": true,
 }

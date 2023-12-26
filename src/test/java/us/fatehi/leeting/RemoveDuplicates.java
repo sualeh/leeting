@@ -1,5 +1,7 @@
 package us.fatehi.leeting;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import us.ListNode;
 
 /**
@@ -7,13 +9,13 @@ import us.ListNode;
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
  */
 public class RemoveDuplicates {
+    @Test
+    public void maintest() {
 
-    public static void main(String[] args) {
         RemoveDuplicates dedupe = new RemoveDuplicates();
 
         ListNode deduped1 = dedupe.deleteDuplicates(ListNode.of(1, 1, 1, 2, 3));
-        boolean checkEquals1 = ListNode.checkEquals(deduped1, ListNode.of(1, 2, 3));
-        System.out.println(checkEquals1);
+        Assertions.assertEquals(deduped1, ListNode.of(1, 2, 3));
     }
 
     public ListNode deleteDuplicates(ListNode head) {

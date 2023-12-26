@@ -1,14 +1,23 @@
 package us.fatehi.leeting;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
+/**
+ * Best Time to Buy and Sell Stock.
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ */
 public class MaximumProfit {
     
-    public static void main(String[] args) {
+    @Test
+    public void maintest() {
+
         MaximumProfit maxProfit = new MaximumProfit();
 
-        int profit = maxProfit.maxProfit(new int[] {4, 5, 8, 10, 1, 2, 3});
-        boolean checkEquals1 = profit == 6;    
-        System.out.println(checkEquals1);
+        int profit;
+        
+        profit = maxProfit.maxProfit(new int[] {4, 5, 8, 10, 1, 2, 3});
+        Assertions.assertEquals(6, profit);
     }
 
     public int maxProfit(int[] prices) {
@@ -21,6 +30,8 @@ public class MaximumProfit {
 
         for (int i = 1; i < prices.length; i++) {
             // Update the minimum price if a lower price is found
+            // (This is for future reference, in case we get a later price that has 
+            // a higher profit.)
             minPrice = Math.min(minPrice, prices[i]);
 
             // Update the maximum profit if a better selling day is found

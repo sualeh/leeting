@@ -1,5 +1,7 @@
 package us.fatehi.leeting;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import us.ListNode;
 
 /**
@@ -8,12 +10,13 @@ import us.ListNode;
  */
 public class RemoveDuplicates2 {
 
-    public static void main(String[] args) {
+    @Test
+    public void maintest() {
+
         RemoveDuplicates2 dedupe = new RemoveDuplicates2();
 
         ListNode deduped1 = dedupe.deleteDuplicates(ListNode.of(1, 1, 1, 2, 3));
-        boolean checkEquals1 = ListNode.checkEquals(deduped1, ListNode.of(2, 3));
-        System.out.println(checkEquals1);
+        Assertions.assertEquals(deduped1, ListNode.of(2, 3));
     }
 
     public ListNode deleteDuplicates(ListNode head) {
