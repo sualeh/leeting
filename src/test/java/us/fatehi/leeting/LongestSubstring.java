@@ -19,16 +19,14 @@ public class LongestSubstring {
         Assertions.assertEquals("", longestSubstringValue, "Empty String");
 
         longestSubstringValue = longestSubstring.longestSubstring("a");
-        Assertions.assertEquals("a", longestSubstringValue,
-                "String with a Single Character");
+        Assertions.assertEquals("a", longestSubstringValue, "String with a Single Character");
 
         longestSubstringValue = longestSubstring.longestSubstring("abcdef");
         Assertions.assertEquals("abcdef", longestSubstringValue,
                 "String with All Unique Characters");
 
         longestSubstringValue = longestSubstring.longestSubstring("abcabcbb");
-        Assertions.assertEquals("abc", longestSubstringValue,
-                "String with Repeating Characters");
+        Assertions.assertEquals("abc", longestSubstringValue, "String with Repeating Characters");
 
         longestSubstringValue = longestSubstring.longestSubstring("bbabcdef");
         Assertions.assertEquals("abcdef", longestSubstringValue,
