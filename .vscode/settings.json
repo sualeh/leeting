@@ -10,7 +10,7 @@
     "git.rebaseWhenSync": true,
     "java.configuration.updateBuildConfiguration": "interactive",
     "java.debug.settings.onBuildFailureProceed": true,
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "git.postCommitCommand": "sync",
 }
