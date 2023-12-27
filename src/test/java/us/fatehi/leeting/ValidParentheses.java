@@ -1,13 +1,11 @@
 package us.fatehi.leeting;
 
-import java.io.PrintWriter;
 import java.util.Stack;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Stack
- * https://leetcode.com/problems/valid-parentheses
+ * Stack https://leetcode.com/problems/valid-parentheses
  */
 public class ValidParentheses {
 
