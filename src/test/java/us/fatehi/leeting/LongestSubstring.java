@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Longest Substring Without Repeating Characters
+ * 
+ * Windowing
+ * 
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
 public class LongestSubstring {

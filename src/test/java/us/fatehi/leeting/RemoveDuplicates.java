@@ -5,7 +5,10 @@ import org.junit.jupiter.api.Test;
 import us.ListNode;
 
 /**
+ * Remove Duplicates from Sorted List
+ * 
  * Linked List
+ * 
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
  */
 public class RemoveDuplicates {
