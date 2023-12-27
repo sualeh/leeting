@@ -40,9 +40,14 @@ public class LongestSubstring {
         Assertions.assertEquals("abcdef", longestSubstringValue,
                 "String with Repeating Characters at the End");
 
+        longestSubstringValue = longestSubstring.longestSubstring("tmmzuxt");
+        Assertions.assertEquals("mzuxt", longestSubstringValue,
+                "String with Repeating Characters at the Middle");
+
         longestSubstringValue = longestSubstring.longestSubstring("aaaa");
         Assertions.assertEquals("a", longestSubstringValue,
                 "String with Only Repeating Characters");
+
     }
 
     private String longestSubstring(final String string) {
@@ -61,6 +66,9 @@ public class LongestSubstring {
             if (foundCodePoints.contains(codePointAtEnd)) {
                 // Move the start pointer to the matching character
                 while (string.codePointAt(start) != codePointAtEnd) {
+                    // Remove characters that we are skipping over
+                    int codePointAtStart = string.codePointAt(start);
+                    foundCodePoints.remove(codePointAtStart);
                     start = start + 1;
                 }
                 // Now the matching character is at the start of the substring,
