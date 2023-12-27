@@ -20,24 +20,59 @@ public class ReverseLinkedList {
 
         ListNode reversedList;
 
+        reversedList = reverseLinkedList.reverseList(null);
+        Assertions.assertEquals(null, reversedList, "null list");
+
+        reversedList = reverseLinkedList.reverseList(ListNode.of(1));
+        Assertions.assertEquals(ListNode.of(1), reversedList, "Single node");
+
+        reversedList = reverseLinkedList.reverseList(ListNode.of(1, 2));
+        Assertions.assertEquals(ListNode.of(2, 1), reversedList, "Two nodes");
+
         reversedList = reverseLinkedList.reverseList(ListNode.of(1, 1, 1, 2, 3));
-        Assertions.assertEquals(6, reversedList);
+        Assertions.assertEquals(ListNode.of(3, 2, 1, 1, 1), reversedList,
+                "Happy path, odd number of nodes, including duplicate nodes");
+
+        reversedList = reverseLinkedList.reverseList(ListNode.of(1, 2, 3, 4));
+        Assertions.assertEquals(ListNode.of(4, 3, 2, 1), reversedList,
+                "Happy path, even number of nodes");
     }
 
     public ListNode reverseList(ListNode head) {
-        ListNode revHead;
-        ListNode c1, c2, c3;
-        c1 = head;
-        while (c1 != null) {
-            c2 = c1.next;
-            if (c2 != null) {
-                c3 = c2.next;
-            } else {
-                c3 = null;
-            }
-            // Flip c1 and c2
+        if (head == null) {
+            return null;
         }
+        System.out.println(">> Given: " + head);
+        ListNode c1 = head;
+        ListNode c2 = nextNode(c1);
+        ListNode c3 = nextNode(c2);
+        ListNode revHead = c1;
+
+        do {
+            if (c2 != null) {
+                if (c1 == head) {
+                    c1.next = null;
+                }
+                c2.next = c1;
+                revHead = c2;
+                System.out.println("   Built: " + revHead);
+                // Move along the list
+                c1 = c2;
+                c2 = c3;
+                c3 = nextNode(c2);
+            } else {
+                break;
+            }
+        } while (true);
         return revHead;
+    }
+
+    private ListNode nextNode(ListNode head) {
+        if (head == null) {
+            return null;
+        } else {
+            return head.next;
+        }
     }
 
 }
