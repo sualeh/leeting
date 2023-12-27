@@ -12,4 +12,5 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
+    "git.postCommitCommand": "sync",
 }
