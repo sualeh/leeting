@@ -67,4 +67,19 @@ public class ListNode {
         }
         return true;
     }
+
+    public String toString() {
+        StringBuilder buffer = new StringBuilder();
+        buffer.append("[");
+        ListNode current = this;
+        while (current != null) {
+            buffer.append(current.val);
+            if (current.next != null) {
+                buffer.append(", ");
+            }
+            current = current.next;
+        }
+        buffer.append("]");
+        return buffer.toString();
+    }
 }
