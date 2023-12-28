@@ -1,7 +1,7 @@
 package us.fatehi.leeting.problems;
 
 import org.junit.jupiter.api.Test;
-import us.ListNode;
+import us.fatehi.leeting.util.ListNode;
 
 /**
  * Add Two Numbers

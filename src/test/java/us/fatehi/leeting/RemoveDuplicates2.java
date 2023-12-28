@@ -2,7 +2,7 @@ package us.fatehi.leeting;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import us.ListNode;
+import us.fatehi.leeting.util.ListNode;
 
 /**
  * Remove Duplicates from Sorted List II

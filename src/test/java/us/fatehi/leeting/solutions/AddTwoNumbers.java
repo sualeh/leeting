@@ -1,7 +1,7 @@
 package us.fatehi.leeting.solutions;
 
-import us.ListNode;
 import us.fatehi.leeting.problems.ProblemAddTwoNumbers;
+import us.fatehi.leeting.util.ListNode;
 
 
 public class AddTwoNumbers extends ProblemAddTwoNumbers {

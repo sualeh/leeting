@@ -1,4 +1,4 @@
-package us;
+package us.fatehi.leeting.util;
 
 /**
  * Definition for singly-linked list.
