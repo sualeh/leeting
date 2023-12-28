@@ -1,7 +1,6 @@
-package us.fatehi.leeting;
+package us.fatehi.leeting.solutions;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import us.fatehi.leeting.problems.ProblemMaximumProfit;
 
 /**
  * Best Time to Buy and Sell Stock
@@ -10,18 +9,8 @@ import org.junit.jupiter.api.Test;
  * 
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
  */
-public class MaximumProfit {
+public class MaximumProfit extends ProblemMaximumProfit {
 
-    @Test
-    public void maintest() {
-
-        MaximumProfit maxProfit = new MaximumProfit();
-
-        int profit;
-
-        profit = maxProfit.maxProfit(new int[] {4, 5, 8, 10, 1, 2, 3});
-        Assertions.assertEquals(6, profit);
-    }
 
     public int maxProfit(int[] prices) {
         if (prices == null || prices.length <= 1) {
@@ -42,6 +31,11 @@ public class MaximumProfit {
         }
 
         return maxProfit;
+    }
+
+    @Override
+    public ProblemMaximumProfit solutionObject() {
+        return new MaximumProfit();
     }
 
 }
