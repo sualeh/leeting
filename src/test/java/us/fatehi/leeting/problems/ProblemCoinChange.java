@@ -13,7 +13,7 @@ public abstract class ProblemCoinChange implements Problem {
     public abstract int coinChange(int[] coins, int amount);
 
     @Test
-    public void maintest() {
+    public void testImplementation() {
 
         ProblemCoinChange coinChange = (ProblemCoinChange) solutionObject();
 

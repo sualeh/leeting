@@ -16,7 +16,7 @@ public abstract class ProblemReverseLinkedList implements Problem {
     public abstract ListNode reverseList(ListNode head);
 
     @Test
-    public void maintest() {
+    public void testImplementation() {
 
         ProblemReverseLinkedList reverseLinkedList = (ProblemReverseLinkedList) solutionObject();
 

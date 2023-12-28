@@ -15,7 +15,7 @@ public abstract class ProblemMaximumProfit implements Problem {
     public abstract int maxProfit(int[] prices);
 
     @Test
-    public void maintest() {
+    public void testImplementation() {
 
         ProblemMaximumProfit maxProfit = (ProblemMaximumProfit) solutionObject();
 

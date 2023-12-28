@@ -11,7 +11,7 @@ public abstract class ProblemValidParentheses implements Problem {
     public abstract boolean isValid(String s);
 
     @Test
-    public void maintest() {
+    public void testImplementation() {
 
         ProblemValidParentheses validParentheses = (ProblemValidParentheses) solutionObject();
 

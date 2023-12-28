@@ -15,7 +15,7 @@ public abstract class ProblemAddTwoNumbers implements Problem {
     public abstract ListNode addTwoNumbers(ListNode l1, ListNode l2);
 
     @Test
-    public void maintest() {
+    public void testImplementation() {
 
         ProblemAddTwoNumbers add = (ProblemAddTwoNumbers) solutionObject();
 

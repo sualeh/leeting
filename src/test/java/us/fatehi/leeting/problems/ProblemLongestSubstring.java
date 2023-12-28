@@ -12,44 +12,47 @@ import org.junit.jupiter.api.Test;
  */
 public abstract class ProblemLongestSubstring implements Problem {
 
-    public abstract String longestSubstring(final String string);
+        public abstract String longestSubstring(final String string);
 
-    @Test
-    public void maintest() {
+        @Test
+        public void testImplementation() {
 
-        ProblemLongestSubstring longestSubstring = (ProblemLongestSubstring) solutionObject();
+                ProblemLongestSubstring longestSubstring =
+                                (ProblemLongestSubstring) solutionObject();
 
-        String longestSubstringValue;
+                String longestSubstringValue;
 
-        longestSubstringValue = longestSubstring.longestSubstring("");
-        Assertions.assertEquals("", longestSubstringValue, "Empty String");
+                longestSubstringValue = longestSubstring.longestSubstring("");
+                Assertions.assertEquals("", longestSubstringValue, "Empty String");
 
-        longestSubstringValue = longestSubstring.longestSubstring("a");
-        Assertions.assertEquals("a", longestSubstringValue, "String with a Single Character");
+                longestSubstringValue = longestSubstring.longestSubstring("a");
+                Assertions.assertEquals("a", longestSubstringValue,
+                                "String with a Single Character");
 
-        longestSubstringValue = longestSubstring.longestSubstring("abcdef");
-        Assertions.assertEquals("abcdef", longestSubstringValue,
-                "String with All Unique Characters");
+                longestSubstringValue = longestSubstring.longestSubstring("abcdef");
+                Assertions.assertEquals("abcdef", longestSubstringValue,
+                                "String with All Unique Characters");
 
-        longestSubstringValue = longestSubstring.longestSubstring("abcabcbb");
-        Assertions.assertEquals("abc", longestSubstringValue, "String with Repeating Characters");
+                longestSubstringValue = longestSubstring.longestSubstring("abcabcbb");
+                Assertions.assertEquals("abc", longestSubstringValue,
+                                "String with Repeating Characters");
 
-        longestSubstringValue = longestSubstring.longestSubstring("bbabcdef");
-        Assertions.assertEquals("abcdef", longestSubstringValue,
-                "String with Repeating Characters at the Beginning");
+                longestSubstringValue = longestSubstring.longestSubstring("bbabcdef");
+                Assertions.assertEquals("abcdef", longestSubstringValue,
+                                "String with Repeating Characters at the Beginning");
 
-        longestSubstringValue = longestSubstring.longestSubstring("abcdeff");
-        Assertions.assertEquals("abcdef", longestSubstringValue,
-                "String with Repeating Characters at the End");
+                longestSubstringValue = longestSubstring.longestSubstring("abcdeff");
+                Assertions.assertEquals("abcdef", longestSubstringValue,
+                                "String with Repeating Characters at the End");
 
-        longestSubstringValue = longestSubstring.longestSubstring("tmmzuxt");
-        Assertions.assertEquals("mzuxt", longestSubstringValue,
-                "String with Repeating Characters at the Middle");
+                longestSubstringValue = longestSubstring.longestSubstring("tmmzuxt");
+                Assertions.assertEquals("mzuxt", longestSubstringValue,
+                                "String with Repeating Characters at the Middle");
 
-        longestSubstringValue = longestSubstring.longestSubstring("aaaa");
-        Assertions.assertEquals("a", longestSubstringValue,
-                "String with Only Repeating Characters");
+                longestSubstringValue = longestSubstring.longestSubstring("aaaa");
+                Assertions.assertEquals("a", longestSubstringValue,
+                                "String with Only Repeating Characters");
 
-    }
+        }
 
 }

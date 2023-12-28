@@ -14,7 +14,7 @@ import us.fatehi.leeting.util.ListNode;
 public abstract class ProblemRemoveDuplicates2 implements Problem {
 
     @Test
-    public void maintest() {
+    public void testImplementation() {
 
         ProblemRemoveDuplicates2 dedupe = (ProblemRemoveDuplicates2) solutionObject();
 

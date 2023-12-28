@@ -16,7 +16,7 @@ public abstract class ProblemRemoveDuplicates implements Problem {
     public abstract ListNode deleteDuplicates(ListNode head);
 
     @Test
-    public void maintest() {
+    public void testImplementation() {
 
         ProblemRemoveDuplicates dedupe = (ProblemRemoveDuplicates) solutionObject();
 
