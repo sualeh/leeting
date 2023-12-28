@@ -2,13 +2,7 @@ package us.fatehi.leeting.solutions;
 
 import us.fatehi.leeting.problems.ProblemMaximumProfit;
 
-/**
- * Best Time to Buy and Sell Stock
- * 
- * Windowing
- * 
- * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
- */
+
 public class MaximumProfit extends ProblemMaximumProfit {
 
 
