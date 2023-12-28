@@ -11,7 +11,7 @@ public class LongestSubstring extends ProblemLongestSubstring {
         if (string == null || string.length() == 0) {
             return "";
         }
-        System.out.println(">           " + string);
+        DEBUG(">           " + string);
         final Set<Integer> foundCodePoints = new HashSet<>();
         int start = 0;
         int end = 1;
@@ -38,7 +38,7 @@ public class LongestSubstring extends ProblemLongestSubstring {
                 longest_start = start;
                 longest_end = end;
             }
-            System.out.printf("- [%2d - %2d] %s {window %s}%n", longest_start, longest_end,
+            DEBUG("- [%2d - %2d] %s {window %s}", longest_start, longest_end,
                     string.substring(longest_start, longest_end), string.substring(start, end));
         }
         return string.substring(longest_start, longest_end);

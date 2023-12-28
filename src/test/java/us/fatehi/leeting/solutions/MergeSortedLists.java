@@ -16,8 +16,7 @@ public class MergeSortedLists extends ProblemMergeSortedLists {
         }
 
 
-        System.out.printf("> %s {%d}, %s {%d}%n", Arrays.toString(nums1), m, Arrays.toString(nums2),
-                n);
+        DEBUG("> %s {%d}, %s {%d}", Arrays.toString(nums1), m, Arrays.toString(nums2), n);
 
         // Renamed variables, and make pointers
         int[] ary1 = Arrays.copyOfRange(nums1, 0, m);
@@ -41,9 +40,9 @@ public class MergeSortedLists extends ProblemMergeSortedLists {
         }
 
         // Debug
-        System.out.println(Arrays.toString(merged));
-        System.out.println(Arrays.toString(Arrays.copyOfRange(ary1, p_ary1, ary1.length)));
-        System.out.println(Arrays.toString(Arrays.copyOfRange(ary2, p_ary2, ary2.length)));
+        DEBUG(Arrays.toString(merged));
+        DEBUG(Arrays.toString(Arrays.copyOfRange(ary1, p_ary1, ary1.length)));
+        DEBUG(Arrays.toString(Arrays.copyOfRange(ary2, p_ary2, ary2.length)));
 
         // Finish up the first array
         while (p_ary1 < m) {
@@ -61,7 +60,7 @@ public class MergeSortedLists extends ProblemMergeSortedLists {
             p_merged = p_merged + 1;
         }
 
-        System.out.println(Arrays.toString(merged));
+        DEBUG(Arrays.toString(merged));
 
     }
 

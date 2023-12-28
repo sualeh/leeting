@@ -9,4 +9,8 @@ public interface Problem {
 
     Object solutionObject();
 
+    default void DEBUG(String format, Object... args) {
+        System.out.printf(format + "%n", args);
+    }
+
 }

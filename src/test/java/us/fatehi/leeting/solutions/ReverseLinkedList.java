@@ -10,7 +10,7 @@ public class ReverseLinkedList extends ProblemReverseLinkedList {
         if (head == null) {
             return null;
         }
-        System.out.println(">> Given: " + head);
+        DEBUG(">> Given: " + head);
         ListNode c1 = head;
         ListNode c2 = nextNode(c1);
         ListNode c3 = nextNode(c2);
@@ -23,7 +23,7 @@ public class ReverseLinkedList extends ProblemReverseLinkedList {
                 }
                 c2.next = c1;
                 revHead = c2;
-                System.out.println("   Built: " + revHead);
+                DEBUG("   Built: " + revHead);
                 // Move along the list
                 c1 = c2;
                 c2 = c3;

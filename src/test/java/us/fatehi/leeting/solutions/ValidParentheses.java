@@ -26,7 +26,7 @@ public class ValidParentheses extends ProblemValidParentheses {
                         return false;
                     }
                     char lastopen = bracket.pop();
-                    System.out.println("open=" + lastopen + " close=" + currchar);
+                    DEBUG("open=" + lastopen + " close=" + currchar);
                     if (currchar == '}' && lastopen != '{') {
                         return false;
                     }
@@ -46,5 +46,5 @@ public class ValidParentheses extends ProblemValidParentheses {
     public ProblemValidParentheses solutionObject() {
         return new ValidParentheses();
     }
-    
+
 }
