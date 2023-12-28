@@ -65,7 +65,8 @@ public class MergeSortedLists extends ProblemMergeSortedLists {
 
     }
 
-    public ProblemMergeSortedLists solutionObject() {
+    @Override
+    public final ProblemMergeSortedLists solutionObject() {
         return new MergeSortedLists();
     }
 

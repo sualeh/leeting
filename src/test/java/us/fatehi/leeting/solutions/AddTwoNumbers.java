@@ -1,26 +1,10 @@
-package us.fatehi.leeting;
+package us.fatehi.leeting.solutions;
 
-import org.junit.jupiter.api.Test;
 import us.ListNode;
+import us.fatehi.leeting.problems.ProblemAddTwoNumbers;
 
-/**
- * Add Two Numbers
- * 
- * Linked List
- * 
- * https://leetcode.com/problems/add-two-numbers/
- */
-public class AddTwoNumbers {
 
-    @Test
-    public void maintest() {
-
-        AddTwoNumbers add = new AddTwoNumbers();
-
-        ListNode sum1 = add.addTwoNumbers(ListNode.of(2, 4, 3), ListNode.of(5, 6, 4));
-        boolean checkEquals1 = ListNode.checkEquals(sum1, ListNode.of(7, 0, 8));
-        System.out.println(checkEquals1);
-    }
+public class AddTwoNumbers extends ProblemAddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode lc1 = l1;
@@ -58,6 +42,11 @@ public class AddTwoNumbers {
             newCurrent.next = new ListNode(1);
         }
         return newNumber;
+    }
+
+    @Override
+    public ProblemAddTwoNumbers solutionObject() {
+        return new AddTwoNumbers();
     }
 
 }
