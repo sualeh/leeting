@@ -2,19 +2,20 @@ package us.fatehi.leeting.problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import us.fatehi.leeting.solutions.MergeSortedLists;
 
 /**
  * Merge Sorted Arrays.
  * 
  * https://leetcode.com/problems/merge-sorted-array/
  */
-public abstract class ProblemMergeSortedLists {
+public abstract class ProblemMergeSortedLists implements Problem {
+
+    public abstract void merge(int[] nums1, int m, int[] nums2, int n);
 
     @Test
     public void maintest() {
 
-        ProblemMergeSortedLists mergeSortedLists = new MergeSortedLists();
+        ProblemMergeSortedLists mergeSortedLists = (ProblemMergeSortedLists) solutionObject();
 
         int[] mergedList;
 
@@ -59,8 +60,6 @@ public abstract class ProblemMergeSortedLists {
         Assertions.assertArrayEquals(ary(1, 1, 1, 1, 1, 1, 1), mergedList, "1, 1, 1, 1, 1, 1");
 
     }
-
-    public abstract void merge(int[] nums1, int m, int[] nums2, int n);
 
 
     private int[] ary(int... n) {

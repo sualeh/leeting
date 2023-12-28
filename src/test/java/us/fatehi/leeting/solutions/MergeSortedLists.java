@@ -3,11 +3,7 @@ package us.fatehi.leeting.solutions;
 import java.util.Arrays;
 import us.fatehi.leeting.problems.ProblemMergeSortedLists;
 
-/**
- * Merge Sorted Arrays.
- * 
- * https://leetcode.com/problems/merge-sorted-array/
- */
+
 public class MergeSortedLists extends ProblemMergeSortedLists {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -67,6 +63,10 @@ public class MergeSortedLists extends ProblemMergeSortedLists {
 
         System.out.println(Arrays.toString(merged));
 
+    }
+
+    public ProblemMergeSortedLists solutionObject() {
+        return new MergeSortedLists();
     }
 
 }
