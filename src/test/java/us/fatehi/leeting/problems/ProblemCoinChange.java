@@ -1,8 +1,5 @@
-package us.fatehi.leeting;
+package us.fatehi.leeting.problems;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -11,12 +8,14 @@ import org.junit.jupiter.api.Test;
  * 
  * https://leetcode.com/problems/coin-change/
  */
-public class CoinChange {
+public abstract class ProblemCoinChange implements Problem {
+
+    public abstract int coinChange(int[] coins, int amount);
 
     @Test
-    public void maintest() {
+    public void testImplementation() {
 
-        CoinChange coinChange = new CoinChange();
+        ProblemCoinChange coinChange = (ProblemCoinChange) solutionObject();
 
         int coins;
 
@@ -45,7 +44,4 @@ public class CoinChange {
         Assertions.assertEquals(20, coins, "Combination with Smaller Coins");
     }
 
-    public int coinChange(int[] coins, int amount) {
-        return 0;
-    }
 }

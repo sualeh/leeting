@@ -1,25 +1,10 @@
-package us.fatehi.leeting;
+package us.fatehi.leeting.solutions;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import us.ListNode;
+import us.fatehi.leeting.problems.ProblemRemoveDuplicates;
+import us.fatehi.leeting.util.ListNode;
 
-/**
- * Remove Duplicates from Sorted List
- * 
- * Linked List
- * 
- * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
- */
-public class RemoveDuplicates {
-    @Test
-    public void maintest() {
 
-        RemoveDuplicates dedupe = new RemoveDuplicates();
-
-        ListNode deduped1 = dedupe.deleteDuplicates(ListNode.of(1, 1, 1, 2, 3));
-        Assertions.assertEquals(deduped1, ListNode.of(1, 2, 3));
-    }
+public class RemoveDuplicates extends ProblemRemoveDuplicates {
 
     public ListNode deleteDuplicates(ListNode head) {
         ListNode newHead = null;
@@ -43,4 +28,10 @@ public class RemoveDuplicates {
         }
         return newHead;
     }
+
+    @Override
+    public ProblemRemoveDuplicates solutionObject() {
+        return new RemoveDuplicates();
+    }
+
 }
