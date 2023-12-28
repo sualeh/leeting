@@ -1,28 +1,13 @@
-package us.fatehi.leeting;
+package us.fatehi.leeting.solutions;
 
 import java.util.Stack;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import us.fatehi.leeting.problems.ProblemValidParentheses;
 
-/**
- * Stack https://leetcode.com/problems/valid-parentheses
- */
-public class ValidParentheses {
 
-    @Test
-    public void maintest() {
-
-        ValidParentheses validParentheses = new ValidParentheses();
-
-        Assertions.assertEquals(false, validParentheses.isValid("([)]"), "\"" + "([)]" + "\"");
-
-        Assertions.assertEquals(true, validParentheses.isValid("()[]{}"), "\"" + "()[]{}" + "\"");
-
-        Assertions.assertEquals(true, validParentheses.isValid("([])"), "\"" + "([])" + "\"");
-    }
+public class ValidParentheses extends ProblemValidParentheses {
 
     public boolean isValid(String s) {
-        System.out.println("new case=" + s);
+
         if (s == null)
             return true;
         Stack<Character> bracket = new Stack<Character>();
@@ -56,4 +41,10 @@ public class ValidParentheses {
         }
         return bracket.isEmpty();
     }
+
+    @Override
+    public ProblemValidParentheses solutionObject() {
+        return new ValidParentheses();
+    }
+    
 }
