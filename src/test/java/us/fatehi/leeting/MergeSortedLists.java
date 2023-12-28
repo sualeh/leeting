@@ -18,9 +18,9 @@ public class MergeSortedLists {
 
         int[] mergedList;
 
-        // mergedList = ary(1, 3, 5, 0, 0, 0);
-        // mergeSortedLists.merge(mergedList, 3, ary(2, 4, 6), 3);
-        // Assertions.assertArrayEquals(ary(1, 2, 3, 4, 5, 6), mergedList, "Basic Case");
+        mergedList = ary(1, 3, 5, 0, 0, 0);
+        mergeSortedLists.merge(mergedList, 3, ary(2, 4, 6), 3);
+        Assertions.assertArrayEquals(ary(1, 2, 3, 4, 5, 6), mergedList, "Basic Case");
 
         mergedList = ary(0, 0, 0);
         mergeSortedLists.merge(mergedList, 0, ary(2, 4, 6), 3);
